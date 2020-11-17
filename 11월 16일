@@ -36,6 +36,8 @@ int main() {	// 주된 코드가 담겨진 부분
 	\r : Carriage return, 커서를 문자열의 처음으로 옮김 (insert, 콘솔환경)
 	\b : Back space, 커서 바로 이전의 문자 한 개를 지워줌
 	\a : Alert, 경고음을 한 번 발생
+	\" : "(큰 따옴표) 출력
+	\' : '(작은 따옴표) 출력
 */
 
 int main() {	
@@ -89,6 +91,9 @@ int main() {
 	%p : pointer, 주소
 	%u : 부호가 없는 10진수 정수
 	%% : 퍼센트 기호 출력
+	%(양수)~ : 오른쪽 정렬
+	%(음수)~ : 왼쪽 정렬
+	%0(양수)~ : 오른쪽 정렬 후 0으로채움
 
 	C언어 데이터 표기법
 	
@@ -108,9 +113,11 @@ int main() {
 	printf("%s\n", "String");
 	printf("%f\n", 123.456);
   
-  printf("%d %d\n", 'A', 'F');
+  	printf("%d %d\n", 'A', 'F');
 	printf("%c %c\n", 65, 97);
-	
+	printf("%-10d %d\n", 10, 25);
+	printf("%%c");
+
 	return 0;	
 }
 
